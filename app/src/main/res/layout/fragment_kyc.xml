@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.kycFragment"
+    android:background="@color/grey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/completeprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fugaz_one"
+            android:text="Complete your profile"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/choosePlanTT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/fugaz_one"
+            android:text="Choose a plan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/completeprofile" />
+
+<!--        <View-->
+
+<!--            android:id="@+id/backplan"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:background="@drawable/planbackground"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/choosePlanTT"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            />-->
+
+        <RadioGroup
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choosePlanTT"
+            android:id="@+id/groupradio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:id="@+id/radia_id1"
+                android:text="Free"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/planbackground"
+                android:textStyle="bold"
+                android:layout_margin="12dp"
+                />
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:id="@+id/radia_id2"
+                android:text="Basic"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/planbackground"
+                android:layout_margin="12dp"
+                android:textStyle="bold"
+                />
+
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:id="@+id/radia_id3"
+                android:text="Premium"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/planbackground"
+                android:layout_margin="12dp"
+                />
+
+        </RadioGroup>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/checkBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/planbackground"
+            android:text="Start"
+            app:layout_constraintTop_toBottomOf="@id/groupradio"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

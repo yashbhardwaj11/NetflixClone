@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MainFragment"
+    android:background="@color/grey"
+    android:id="@+id/moviePageFL"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_main"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/black"
+                    android:elevation="14dp"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/netflixLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintTop_toTopOf="@id/view1"
+                    app:layout_constraintBottom_toBottomOf="@id/view1"
+                    android:src="@drawable/netflix"
+                    android:scaleType="centerCrop"
+                    android:elevation="15dp"
+                    app:layout_constraintStart_toStartOf="@id/view1"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:padding="2sp"
+                    android:id="@+id/tvShowsBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:elevation="15dp"
+                    android:fontFamily="@font/arya"
+                    android:text="Tv Shows"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/view1"
+                    app:layout_constraintStart_toEndOf="@id/netflixLogo"
+                    app:layout_constraintTop_toTopOf="@id/view1" />
+
+                <TextView
+                    android:padding="2dp"
+                    android:id="@+id/moviesBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:elevation="15dp"
+                    android:fontFamily="@font/arya"
+                    android:text="Movies"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/view1"
+                    app:layout_constraintStart_toEndOf="@id/tvShowsBT"
+                    app:layout_constraintTop_toTopOf="@id/view1" />
+
+
+                <FrameLayout
+                    android:id="@+id/mainChangingFL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="56dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view1"
+                    android:layout_marginTop="50dp"
+                    >
+
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

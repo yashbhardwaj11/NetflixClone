@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/drawable/planbackground.xml" value="0.1715" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_all_movies.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_coming_soon.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_kyc.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_list.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_main.xml" value="0.264" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_movie.xml" value="0.2644110275689223" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_movie_page.xml" value="0.264" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_movie_view.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_movies_result.xml" value="0.10989583333333333" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_search.xml" value="0.2" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_search_movie.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_sign_in.xml" value="0.152" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_splash_screen.xml" value="0.2359375" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_tv_page.xml" value="0.2" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/fragment_tv_shows.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/grid_movies_item.xml" value="0.24895833333333334" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/movies_item.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/layout/movies_name_items.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/menu/bottom_nav.xml" value="0.25" />
+        <entry key="..\:/android projects/NetflixClone/app/src/main/res/menu/bottom_nav_main.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

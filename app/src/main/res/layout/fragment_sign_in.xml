@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SignInFragment"
+    android:background="@color/grey"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="14dp"
+            android:background="@color/black"/>
+        <ImageView
+            android:id="@+id/backBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:elevation="15dp"
+            app:layout_constraintTop_toTopOf="@id/view1"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            android:layout_marginStart="25dp"/>
+
+        <ImageView
+            android:letterSpacing="0.08"
+            android:layout_width="90dp"
+            android:layout_height="49dp"
+            app:layout_constraintTop_toTopOf="@id/view1"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintStart_toEndOf="@id/backBT"
+            app:layout_constraintEnd_toStartOf="@id/helpBT"
+            android:text="@string/netflix"
+            android:elevation="15dp"
+            android:textColor="@color/red"
+            android:fontFamily="@font/bebas_neue"
+            android:textSize="35sp"
+            android:src="@drawable/netflix"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/helpBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            android:elevation="14dp"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/view1"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            android:layout_marginEnd="25dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailEtField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            android:layout_marginTop="200dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:background="#7E7E7E"
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:hint="Email"
+                android:textColorHint="@color/grey"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordEtField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintTop_toBottomOf="@id/emailEtField"
+            android:layout_marginTop="30dp"
+            app:passwordToggleEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:background="#7E7E7E"
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signInBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/passwordEtField"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="30dp"
+            android:padding="10dp"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#00000000"
+            android:textColor="@color/white"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/signInBT"
+            app:layout_constraintBottom_toBottomOf="@id/signInBT"
+            app:layout_constraintStart_toStartOf="@id/signInBT"
+            app:layout_constraintEnd_toEndOf="@id/signInBT"
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/red"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

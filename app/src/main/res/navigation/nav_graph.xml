@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.yash.netflixclone.fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_kycFragment2"
+            app:destination="@id/kycFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.yash.netflixclone.fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.yash.netflixclone.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_tvPageFragment"
+            app:destination="@id/tvPageFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_moviesResultFragment"
+            app:destination="@id/moviesResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviePageFragment"
+        android:name="com.yash.netflixclone.fragments.MoviePageFragment"
+        android:label="fragment_movie_page"
+        tools:layout="@layout/fragment_movie_page" >
+        <argument
+            android:name="popularMovies"
+            app:argType="com.yash.netflixclone.Models.PopularMovies" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/moviePageFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="tvShows"
+            app:argType="com.yash.netflixclone.Models.TvShows" />
+        <action
+            android:id="@+id/action_moviePageFragment_self"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvPageFragment"
+        android:name="com.yash.netflixclone.fragments.tvPageFragment"
+        android:label="fragment_tv_page"
+        tools:layout="@layout/fragment_tv_page" >
+        <argument
+            android:name="tvshows"
+            app:argType="com.yash.netflixclone.Models.TvShows" />
+        <action
+            android:id="@+id/action_tvPageFragment_self"
+            app:destination="@id/tvPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kycFragment"
+        android:name="com.yash.netflixclone.fragments.kycFragment"
+        android:label="fragment_kyc"
+        tools:layout="@layout/fragment_kyc" >
+        <action
+            android:id="@+id/action_kycFragment_to_mainFragment2"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.yash.netflixclone.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="com.yash.netflixclone.fragments.ComingSoonFragment"
+        android:label="fragment_coming_soon"
+        tools:layout="@layout/fragment_coming_soon" >
+        <action
+            android:id="@+id/action_comingSoonFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.yash.netflixclone.fragments.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
+    <fragment
+        android:id="@+id/moviesResultFragment"
+        android:name="com.yash.netflixclone.fragments.moviesResultFragment"
+        android:label="fragment_movies_result"
+        tools:layout="@layout/fragment_movies_result" >
+        <action
+            android:id="@+id/action_moviesResultFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+</navigation>

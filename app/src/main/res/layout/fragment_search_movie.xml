@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SearchMovieFragment"
+    android:background="@color/grey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/movieNameEtField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Movie/Tv Shows"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            tools:ignore="MissingConstraints"
+            app:endIconMode="clear_text"
+            android:layout_marginEnd="50dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/movieNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#616161"
+                android:maxLines="1"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/searchBT"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_search"
+            app:layout_constraintStart_toEndOf="@id/movieNameEtField"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movieRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@id/movieNameEtField"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
