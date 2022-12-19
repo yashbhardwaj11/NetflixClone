@@ -37,7 +37,7 @@ class AllMoviesFragment : Fragment(), IMoviesAdapter {
         _binding = FragmentAllMoviesBinding.inflate(layoutInflater,container,false)
         popularMoviesList = arrayListOf()
 
-        val page = (1..10).toList()
+        val page = (1..4).toList()
         val popular_movies_url = "https://api.themoviedb.org/3/movie/popular?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
         topRated_movies_url = "https://api.themoviedb.org/3/movie/top_rated?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
 

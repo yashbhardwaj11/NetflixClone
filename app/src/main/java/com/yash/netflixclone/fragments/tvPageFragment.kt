@@ -37,7 +37,8 @@ class tvPageFragment : Fragment(), IRecommendedTvAdapter {
 
         tvShow = arguments?.getParcelable<TvShows>("tvshows")
         recommendedTvList = arrayListOf()
-        val BASE_URL = "https://api.themoviedb.org/3/tv/${tvShow!!.id}/similar?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=1"
+        val page = (1..4).toList()
+        val BASE_URL = "https://api.themoviedb.org/3/tv/${tvShow!!.id}/similar?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
         settingTvViews(tvShow)
         getRecommended(BASE_URL)
 

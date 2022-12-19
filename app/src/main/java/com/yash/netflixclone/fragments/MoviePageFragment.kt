@@ -42,16 +42,16 @@ class MoviePageFragment : Fragment(), IMoviesAdapter {
         movie = arguments?.getParcelable<PopularMovies>("movie")
         popularMoviesList = arrayListOf()
 
-        val page = (1..10).toList()
+        val page = (1..4).toList()
 
-        val base_url = "https://api.themoviedb.org/3/movie/${movie!!.id}/similar?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=1"
+        val base_url = "https://api.themoviedb.org/3/movie/${movie!!.id}/similar?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
 
         getMovies(base_url)
         auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser!!.uid
         binding.addToWatchList.setOnClickListener {
             val userDao = UserDao()
-            userDao.addMovieToList(currentUser, movie!!.title)
+            userDao.addMovieToList(currentUser,movie!!.title)
             binding.addToWatchList.text = "Added to watchList"
         }
 

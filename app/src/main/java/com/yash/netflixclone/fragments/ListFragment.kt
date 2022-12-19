@@ -43,7 +43,6 @@ class ListFragment : Fragment(), IMyListAdaoter {
         return binding.root
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
     private fun getData() {
         GlobalScope.launch(Dispatchers.IO) {
             val userDao = UserDao()
