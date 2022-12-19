@@ -16,7 +16,7 @@ This project is complete clone of Netflix. It was created with Kotlin. It uses T
 
 ![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/1671387607354.gif)
 
-![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/20221219_221538.mp4)
+![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/novie.gif)
 
 ![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/search.gif)
 
