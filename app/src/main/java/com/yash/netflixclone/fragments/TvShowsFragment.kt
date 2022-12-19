@@ -42,8 +42,9 @@ class TvShowsFragment : Fragment(), IGridMovieAdapter {
     ): View? {
         _binding = FragmentTvShowsBinding.inflate(layoutInflater,container,false)
         tvshowslist = arrayListOf()
+        val api_key = "your_api_key"
         val page = (1..4).toList()
-        val url = "https://api.themoviedb.org/3/tv/popular?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
+        val url = "https://api.themoviedb.org/3/tv/popular?api_key=$api_key&language=en-US&page=${page.random()}"
 
 
         getTvShows(url)

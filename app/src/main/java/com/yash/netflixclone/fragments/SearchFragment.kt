@@ -33,7 +33,8 @@ class SearchFragment : Fragment() {
     ): View? {
         _binding = FragmentSearchBinding.inflate(layoutInflater,container,false)
         val movieName = arguments?.getString("movieName")
-        val base_url = "https://api.themoviedb.org/3/search/movie?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&query=${movieName}&page=1&include_adult=false"
+        val api_key = "your_api_key"
+        val base_url = "https://api.themoviedb.org/3/search/movie?api_key=$api_key&language=en-US&query=${movieName}&page=1&include_adult=false"
 
         val currentUser = FirebaseAuth.getInstance().currentUser!!.uid
 

@@ -31,8 +31,9 @@ class ComingSoonFragment : Fragment(), IGridAdapter {
     ): View? {
         _binding = FragmentComingSoonBinding.inflate(layoutInflater,container , false)
         movies = arrayListOf()
+        val api_key = "your_api_key"
         val page = (1..4).toList()
-        val BASE_URL  :String = "https://api.themoviedb.org/3/movie/upcoming?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
+        val BASE_URL  :String = "https://api.themoviedb.org/3/movie/upcoming?api_key=$api_key&language=en-US&page=${page.random()}"
 
         getData(BASE_URL)
 

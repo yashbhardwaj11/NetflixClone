@@ -23,7 +23,6 @@ class moviesResultFragment : Fragment(), IGridAdapter {
     private val binding get() = _binding!!
     private lateinit var movie : ArrayList<PopularMovies>
     private lateinit var adapter : GridAdapter
-    private val BASE_URL = "https://api.themoviedb.org/3/movie/popular?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=2"
 
 
     override fun onCreateView(
@@ -34,8 +33,9 @@ class moviesResultFragment : Fragment(), IGridAdapter {
 
 
         movie = arrayListOf()
+        val api_key = "your_api_key"
         val movieName = arguments?.getString("movieName")
-        val base = "https://api.themoviedb.org/3/search/movie?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=1&include_adult=false&query=${movieName}"
+        val base = "https://api.themoviedb.org/3/search/movie?api_key=$api_key&language=en-US&page=1&include_adult=false&query=${movieName}"
         Log.d("URLBASE",base)
         getData(base)
         binding.tvshowsTT.text = "Search results for : $movieName"

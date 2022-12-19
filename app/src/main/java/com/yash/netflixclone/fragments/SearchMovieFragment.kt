@@ -33,9 +33,10 @@ class SearchMovieFragment : Fragment(), IGridAdapter {
         _binding = FragmentSearchMovieBinding.inflate(layoutInflater,container,false)
         movies = arrayListOf()
         val movieName = binding.movieNameEt.text
+        val api_key = "your_api_key"
         val page = (1..4).toList()
 
-        val base_url = "https://api.themoviedb.org/3/movie/popular?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=${page.random()}"
+        val base_url = "https://api.themoviedb.org/3/movie/popular?api_key=$api_key&language=en-US&page=${page.random()}"
 
 
         getData(base_url)
