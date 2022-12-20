@@ -27,7 +27,8 @@ class AllMoviesFragment : Fragment(), IMoviesAdapter {
     private lateinit var popularMoviesList: ArrayList<PopularMovies>
     private lateinit var adapter : MovieAdapter
     private val imageUrl = "https://image.tmdb.org/t/p/w500/"
-    var topRated_movies_url = "https://api.themoviedb.org/3/movie/top_rated?api_key=254099e5a74c71ef5bfa775109e5e90f&language=en-US&page=1"
+    val api_key = "your_api_key"
+    var topRated_movies_url = "https://api.themoviedb.org/3/movie/top_rated?api_key=$api_key&language=en-US&page=1"
 
 
     override fun onCreateView(
