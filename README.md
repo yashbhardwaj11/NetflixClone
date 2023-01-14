@@ -14,11 +14,11 @@ This project is complete clone of Netflix. It was created with Kotlin. It uses T
  * XML
 ## Demo
 
-![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/1671387607354.gif)
+![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/1671387607354.gif?raw=true)
 
-![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/novie.gif)
+![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/novie.gif?raw=true)
 
-![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/search.gif)
+![](https://github.com/yashbhardwaj11/NetflixClone/blob/master/images/search.gif?raw=true)
 
 
 ## Download APK
